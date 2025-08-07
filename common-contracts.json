@@ -1,0 +1,269 @@
+{
+  "current": [
+    {
+      "fvTenant": {
+        "attributes": {
+          "annotation": "",
+          "childAction": "",
+          "descr": "",
+          "dn": "uni/tn-common",
+          "extMngdBy": "",
+          "lcOwn": "local",
+          "modTs": "2025-08-06T10:07:09.222+00:00",
+          "monPolDn": "uni/tn-common/monepg-default",
+          "name": "common",
+          "nameAlias": "",
+          "ownerKey": "",
+          "ownerTag": "",
+          "status": "",
+          "uid": "0",
+          "userdom": "all"
+        },
+        "children": [
+          {
+            "vzBrCP": {
+              "attributes": {
+                "accessPrivilege": "USER",
+                "annotation": "",
+                "childAction": "",
+                "configIssues": "filter-not-present",
+                "descr": "",
+                "extMngdBy": "",
+                "intent": "install",
+                "lcOwn": "local",
+                "modTs": "2025-08-07T12:21:18.761+00:00",
+                "monPolDn": "uni/tn-common/monepg-default",
+                "name": "test",
+                "nameAlias": "",
+                "ownerKey": "",
+                "ownerTag": "",
+                "prio": "unspecified",
+                "reevaluateAll": "no",
+                "rn": "brc-test",
+                "scope": "context",
+                "status": "",
+                "targetDscp": "unspecified",
+                "uid": "15374",
+                "userdom": ":all:"
+              }
+            }
+          },
+          {
+            "vzBrCP": {
+              "attributes": {
+                "accessPrivilege": "USER",
+                "annotation": "",
+                "childAction": "",
+                "configIssues": "",
+                "descr": "",
+                "extMngdBy": "",
+                "intent": "install",
+                "lcOwn": "local",
+                "modTs": "2025-08-06T10:07:09.222+00:00",
+                "monPolDn": "uni/tn-common/monepg-default",
+                "name": "default",
+                "nameAlias": "",
+                "ownerKey": "",
+                "ownerTag": "",
+                "prio": "unspecified",
+                "reevaluateAll": "no",
+                "rn": "brc-default",
+                "scope": "context",
+                "status": "",
+                "targetDscp": "unspecified",
+                "uid": "0",
+                "userdom": "all"
+              },
+              "children": [
+                {
+                  "vzDirAssDef": {
+                    "attributes": {
+                      "childAction": "deleteNonPresent",
+                      "descr": "",
+                      "lcOwn": "local",
+                      "modTs": "2025-08-07T11:52:32.054+00:00",
+                      "monPolDn": "uni/tn-common/monepg-default",
+                      "name": "",
+                      "nameAlias": "",
+                      "ownerKey": "",
+                      "ownerTag": "",
+                      "rn": "dirass",
+                      "status": ""
+                    },
+                    "children": [
+                      {
+                        "vzConsDef": {
+                          "attributes": {
+                            "anyDn": "",
+                            "bdDefDn": "uni/bd-[uni/tn-gigitech-Tenent-Lo1/BD-gigotech-BD-LO1]-isSvc-no",
+                            "bdDefStQual": "none",
+                            "bgpDomainId": "5341",
+                            "childAction": "deleteNonPresent",
+                            "ctxDefDn": "uni/ctx-[uni/tn-gigitech-Tenent-Lo1/ctx-gigotech-VRF-policy]",
+                            "ctxDefStQual": "none",
+                            "ctxPcTag": "32770",
+                            "ctxSeg": "2785283",
+                            "descr": "",
+                            "epgDn": "uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-web-epg",
+                            "exceptionTag": "",
+                            "intent": "install",
+                            "isAny": "no",
+                            "isCifLblIntersEmpty": "no",
+                            "isMsiteEPg": "no",
+                            "l3CtxEncap": "vxlan-2785283",
+                            "lcOwn": "local",
+                            "modTs": "2025-08-07T11:52:32.054+00:00",
+                            "monPolDn": "uni/tn-common/monepg-default",
+                            "name": "web-epg",
+                            "nameAlias": "",
+                            "ownerKey": "",
+                            "ownerTag": "",
+                            "pcEnfPref": "enforced",
+                            "pcTag": "32771",
+                            "prefGrMemb": "exclude",
+                            "prio": "level3",
+                            "rn": "cons-[uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-web-epg]-any-no",
+                            "scopeId": "2785283",
+                            "status": "",
+                            "targetDscp": "unspecified",
+                            "txId": "16717361816799315569",
+                            "useAnyDef": "no"
+                          }
+                        }
+                      },
+                      {
+                        "vzProvDef": {
+                          "attributes": {
+                            "anyDn": "",
+                            "bdDefDn": "uni/bd-[uni/tn-gigitech-Tenent-Lo1/BD-gigotech-BD-LO1]-isSvc-no",
+                            "bdDefStQual": "none",
+                            "bgpDomainId": "5341",
+                            "childAction": "deleteNonPresent",
+                            "ctxDefDn": "uni/ctx-[uni/tn-gigitech-Tenent-Lo1/ctx-gigotech-VRF-policy]",
+                            "ctxDefStQual": "none",
+                            "ctxPcTag": "32770",
+                            "ctxSeg": "2785283",
+                            "descr": "",
+                            "epgDn": "uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-db-epg",
+                            "exceptionTag": "",
+                            "hasTriggeredAlloc": "no",
+                            "intent": "install",
+                            "isAny": "no",
+                            "isMsiteEPg": "no",
+                            "l3CtxEncap": "vxlan-2785283",
+                            "lcOwn": "local",
+                            "matchT": "AtleastOne",
+                            "modTs": "2025-08-07T11:52:32.054+00:00",
+                            "monPolDn": "uni/tn-common/monepg-default",
+                            "name": "db-epg",
+                            "nameAlias": "",
+                            "ownerKey": "",
+                            "ownerTag": "",
+                            "pcEnfPref": "enforced",
+                            "pcTag": "32772",
+                            "prefGrMemb": "exclude",
+                            "prio": "level3",
+                            "rn": "prov-[uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-db-epg]-any-no",
+                            "scopeId": "2785283",
+                            "status": "",
+                            "targetDscp": "unspecified",
+                            "txId": "16717361816799319809",
+                            "useAnyDef": "no"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "vzSubj": {
+                    "attributes": {
+                      "accessPrivilege": "USER",
+                      "annotation": "",
+                      "childAction": "",
+                      "configIssues": "",
+                      "consMatchT": "AtleastOne",
+                      "descr": "",
+                      "extMngdBy": "",
+                      "lcOwn": "local",
+                      "modTs": "2025-08-06T10:07:09.222+00:00",
+                      "monPolDn": "uni/tn-common/monepg-default",
+                      "name": "default",
+                      "nameAlias": "",
+                      "prio": "unspecified",
+                      "provMatchT": "AtleastOne",
+                      "revFltPorts": "yes",
+                      "rn": "subj-default",
+                      "status": "",
+                      "targetDscp": "unspecified",
+                      "uid": "0",
+                      "userdom": "all"
+                    },
+                    "children": [
+                      {
+                        "vzRsSubjFiltAtt": {
+                          "attributes": {
+                            "accessPrivilege": "USER",
+                            "action": "permit",
+                            "annotation": "",
+                            "childAction": "",
+                            "directives": "",
+                            "extMngdBy": "",
+                            "forceResolve": "yes",
+                            "lcOwn": "local",
+                            "modTs": "2025-08-06T10:07:09.222+00:00",
+                            "monPolDn": "uni/tn-common/monepg-default",
+                            "priorityOverride": "default",
+                            "rType": "mo",
+                            "rn": "rssubjFiltAtt-default",
+                            "state": "formed",
+                            "stateQual": "none",
+                            "status": "",
+                            "tCl": "vzFilter",
+                            "tContextDn": "",
+                            "tDn": "uni/tn-common/flt-default",
+                            "tRn": "flt-default",
+                            "tType": "name",
+                            "tnVzFilterName": "default",
+                            "uid": "0",
+                            "userdom": "all"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "vzRtProv": {
+                    "attributes": {
+                      "childAction": "",
+                      "lcOwn": "local",
+                      "modTs": "2025-08-07T11:52:32.054+00:00",
+                      "rn": "rtfvProv-[uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-db-epg]",
+                      "status": "",
+                      "tCl": "fvAEPg",
+                      "tDn": "uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-db-epg"
+                    }
+                  }
+                },
+                {
+                  "vzRtCons": {
+                    "attributes": {
+                      "childAction": "",
+                      "lcOwn": "local",
+                      "modTs": "2025-08-07T11:52:32.054+00:00",
+                      "rn": "rtfvCons-[uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-web-epg]",
+                      "status": "",
+                      "tCl": "fvAEPg",
+                      "tDn": "uni/tn-gigitech-Tenent-Lo1/ap-gigotech-APP-Profile/epg-web-epg"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

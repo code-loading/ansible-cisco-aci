@@ -1,0 +1,6 @@
+---
+- name: Query all controllers system information
+  hosts: aci
+  roles:
+    - aci_magic
+  

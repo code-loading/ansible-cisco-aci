@@ -1,0 +1,56 @@
+---
+# tasks file for aci_magic
+- name: Query all controllers system information
+  cisco.aci.aci_system:
+    host: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+    state: query
+  register: my_query
+
+# - name: View query info from aci
+#   ansible.builtin.debug:
+#     msg: "Following info was received from ACI: {{ my_query }}"
+#   when: my_query is defined
+
+- name: Add a new tenant
+  cisco.aci.aci_tenant:
+    host: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    tenant: demo-tenant-ehsan
+    description: Workshop tenant
+    state: present
+    validate_certs: false
+
+- name: Add a new AP
+  cisco.aci.aci_ap:
+    host: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    tenant: demo-tenant-ehsan
+    ap: workshop
+    description: Workshop AP
+    monitoring_policy: default
+    state: present
+    validate_certs: false
+
+- name: Add a new EPG
+  cisco.aci.aci_epg:
+    host: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    tenant: demo-tenant-ehsan
+    ap: workshop
+    epg: "{{ item.name }}"
+    description: "{{ item.description }}"
+    # bd: prod_bd
+    monitoring_policy: default
+    preferred_group: true
+    state: present
+    validate_certs: false
+  loop:
+    - {name: 'web', description: 'Web EPG'}
+    - {name: 'app', description: 'APP EPG'}
+    - {name: 'db', description: 'DB EPG'}

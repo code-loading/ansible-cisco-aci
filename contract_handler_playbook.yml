@@ -1,0 +1,5 @@
+---
+- name: Contract handling in ACI
+  hosts: aci
+  roles:
+    - contract_handler

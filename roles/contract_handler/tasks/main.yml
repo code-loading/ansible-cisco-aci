@@ -1,0 +1,27 @@
+---
+# tasks file for roles/contract_handler
+- name: Query a specific contract
+  cisco.aci.aci_contract:
+    host: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    tenant: common
+   # contract: default
+    state: query
+    validate_certs: false
+  register: common_contracts
+
+# - name: Write output to file for easier debugging, removing all keys with Ansible-specific content
+#   ansible.builtin.copy:
+#     content: "{{ common_contracts | ansible.utils.remove_keys(target=['changed', 'failed']) | to_nice_json(indent=2) }}"
+#     dest: "{{ playbook_dir }}/common-contracts.json"
+#     mode: "0644"
+
+- name: Drilling down into the contract info
+  ansible.builtin.debug:
+    msg: "{{ common_contracts | community.general.json_query('current[0].fvTenant.children[1].vzBrCP.attributes.name') }}"
+
+
+# - name: Output contract info
+#   ansible.builtin.debug:
+#     msg: "Contract info: {{ query_result | to_nice_json }}"

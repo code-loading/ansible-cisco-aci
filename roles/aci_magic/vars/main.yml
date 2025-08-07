@@ -1,0 +1,6 @@
+---
+# vars file for aci_magic
+# - {name: 'web', description: 'Web EPG'}
+# - {name: 'app', description: 'APP EPG'}
+# - {name: 'db', description: 'DB EPG'}
+

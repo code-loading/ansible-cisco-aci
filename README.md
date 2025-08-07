@@ -63,6 +63,7 @@ ansible-playbook master_playbook.yml --ask-vault-pass
 
 ## 📁 Directory Structure
 
+```bash
 .
 ├── roles/
 │   ├── aci_magic/
@@ -75,6 +76,7 @@ ansible-playbook master_playbook.yml --ask-vault-pass
 ├── contract_handler_playbook.yml
 ├── master_playbook.yml
 └── README.md
+```
 
 ## 📌 Notes
 - SSL certificate validation is disabled (validate_certs: false) for simplicity. Enable it in production environments.
